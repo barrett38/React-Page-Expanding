@@ -1,5 +1,6 @@
 import genRandomInt from "./components/genRandomInt";
-import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data";
+
 const reactImg = "src/assets/react-core-concepts.png";
 
 function Header() {
@@ -18,7 +19,20 @@ function Header() {
   );
 }
 
-function CoreConcept(props) {
+// Destructuring the props object in the CoreConcept component
+function CoreConcept({ image, title, description }) {
+  return (
+    <li>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </li>
+  );
+}
+
+// Alternative way to write the CoreConcept with props and props.
+// Not being used - Only for demonstration purposes
+function CoreConceptAlternative(props) {
   return (
     <li>
       <img src={props.image} alt={props.title} />
@@ -36,18 +50,16 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
+            {/* Longer version - Calling individual index props */}
             <CoreConcept
-              title="Components"
-              description="The core UI Building Block"
-              image={componentsImg}
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
             />
-            <CoreConcept
-              title="Props"
-              description="The core UI Building Block"
-              image={componentsImg}
-            />
-            <CoreConcept />
-            <CoreConcept />
+            {/* Shorter version - Calling all props of an index at once */}
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
         <h2>Time to get started!</h2>
