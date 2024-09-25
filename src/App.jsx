@@ -1,23 +1,5 @@
-import genRandomInt from "./components/genRandomInt";
 import { CORE_CONCEPTS } from "./data";
-
-const reactImg = "src/assets/react-core-concepts.png";
-
-function Header() {
-  const reactDescriptions = ["Fundamental", "Crucial", "Core"];
-  const description = reactDescriptions[genRandomInt(2)];
-
-  return (
-    <header>
-      <img src={reactImg} alt="Stylized atom" />
-      <h1>React Essentials</h1>
-      <p>
-        {description} React concepts you will need for almost any app you are
-        going to build!
-      </p>
-    </header>
-  );
-}
+import Header from "./components/Header";
 
 // Destructuring the props object in the CoreConcept component
 function CoreConcept({ image, title, description }) {
@@ -69,5 +51,3 @@ function App() {
 }
 
 export default App;
-
-// Testing comments
