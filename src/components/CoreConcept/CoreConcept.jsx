@@ -1,3 +1,5 @@
+import "./CoreConcept.css";
+
 // Destructuring the props object in the CoreConcept component
 export default function CoreConcept({ image, title, description }) {
   return (
