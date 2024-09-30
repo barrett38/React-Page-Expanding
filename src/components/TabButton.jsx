@@ -1,7 +1,13 @@
 export default function TabButton({ children }) {
+  function handleClick() {
+    console.log("Hello World");
+  }
+
   return (
     <li>
-      <button>{children}</button>
+      {/* handleClick() can only be used by the creator */}
+      {/* handleClick without () is used by React constantly in the background */}
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
