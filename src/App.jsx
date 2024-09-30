@@ -26,10 +26,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Component</TabButton>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
           </menu>
         </section>
-        <h2>Time to get started!</h2>
       </main>
     </div>
   );
@@ -37,4 +39,4 @@ function App() {
 
 export default App;
 
-// Next is 49
+// Next is 50
