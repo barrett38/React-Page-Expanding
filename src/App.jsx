@@ -11,6 +11,9 @@ function App() {
     tabContent = selectedButton;
     console.log(tabContent);
   }
+
+  console.log("App component executing");
+
   return (
     <div>
       <Header />
