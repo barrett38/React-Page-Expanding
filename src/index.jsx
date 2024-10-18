@@ -6,5 +6,5 @@ import "./index.css";
 const entryPoint = document.getElementById("root");
 ReactDOM.createRoot(entryPoint).render(<App />);
 
-// Personal Notes: 56/0
+// Personal Notes: 57/0
 // To start: npm run dev
